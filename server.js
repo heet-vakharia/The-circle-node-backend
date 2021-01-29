@@ -139,6 +139,6 @@ io.on('connection',(socket)=>{
 //     })
 // })
 
-http.listen('3002',()=>{
+http.listen(process.env.PORT|| 3002,()=>{
     console.log('server connected')
 })
