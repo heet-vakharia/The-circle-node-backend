@@ -8,7 +8,7 @@ const io = require('socket.io')(http, {
 var client;
 const users = [];
 const group = {};
-app.use(cors);
+app.use(cors());
 app.get("/",(req,res)=>{
     res.send("Done")
 })
