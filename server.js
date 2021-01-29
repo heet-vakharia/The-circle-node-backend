@@ -1,12 +1,17 @@
 const http = require('http').createServer();
 const mysql = require('mysql');
+const app = require("express")();
+const cors = require("cors")
 const io = require('socket.io')(http, {
     reconnect:true
 });
 var client;
 const users = [];
 const group = {};
-
+app.use(cors);
+app.get("/",(req,res)=>{
+    res.send("Done")
+})
 io.on('connection',(socket)=>{
     console.log("Connnnnn");
     console.log(socket.id);
